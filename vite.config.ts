@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/interactive-article-catalog/',
   resolve: {
     alias: {
       // Alias @ to the src directory
