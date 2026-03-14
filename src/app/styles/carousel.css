@@ -1,0 +1,19 @@
+/* Estilos customizados para o carrossel de categorias */
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li button:before {
+  font-size: 8px;
+  color: #3b82f6;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #3b82f6;
+  opacity: 1;
+}
+
+.slick-slide > div {
+  margin: 0 auto;
+}
