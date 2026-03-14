@@ -20,12 +20,12 @@ export function ArticleCard({ article }: ArticleCardProps) {
       </div>
 
       {/* Título */}
-      <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">
         {article.titulo}
       </h3>
 
       {/* Resumo */}
-      <p className="text-sm text-gray-600 mb-4 flex-grow line-clamp-4">
+      <p className="text-sm text-gray-600 mb-4 flex-grow text-justify">
         {article.resumo}
       </p>
 

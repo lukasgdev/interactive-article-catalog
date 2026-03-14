@@ -14,9 +14,9 @@ export function CategoryCard({ name, count, icon: Icon, isSelected, onClick, col
     <button
       onClick={onClick}
       className={`
-        relative p-5 rounded-xl border-2 transition-all duration-300 text-left
+        w-full relative p-5 rounded-xl border-2 transition-all duration-300 text-left
         ${isSelected 
-          ? 'bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 shadow-lg scale-105' 
+          ? 'bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 shadow-lg' 
           : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-md'
         }
       `}

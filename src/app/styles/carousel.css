@@ -1,6 +1,6 @@
 /* Estilos customizados para o carrossel de categorias */
 .slick-dots {
-  bottom: -35px;
+  bottom: -45px;
 }
 
 .slick-dots li button:before {
@@ -16,4 +16,14 @@
 
 .slick-slide > div {
   margin: 0 auto;
+}
+
+/* Padronizar tamanho dos cards do carrossel */
+.slick-slide button {
+  height: 100px;
+  width: 100% !important;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  overflow: hidden;
 }

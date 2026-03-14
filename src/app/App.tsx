@@ -117,7 +117,7 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center gap-3 mb-2">
             <BookMarked className="w-8 h-8 text-blue-600" />
             <h1 className="text-3xl font-bold text-gray-900">
@@ -132,7 +132,7 @@ export default function App() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Cards de Categorias */}
-        <div className="mb-8">
+        <div className="mb-14 sm:mb-8">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Categorias</h2>
 
           {/* Carrossel para Mobile */}

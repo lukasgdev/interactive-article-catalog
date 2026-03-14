@@ -319,7 +319,7 @@ export const articles: Article[] = [
     id: 35,
     ano: 2023,
     titulo: "Diretrizes Ético-Jurídicas para o Design e Uso de Inteligência Artificial na Administração Pública",
-    resumo: "Diretrizes Ético-Jurídicas para o Design e Uso de Inteligência Artificial na Administração Pública",
+    resumo: "O presente artigo propõe diretrizes ético-jurídicas para nortear a Administração Pública no design e uso de Inteligência Artificial, a saber: i) Excelência na prestação de serviços públicos; ii) Centralidade do ser humano; iii) Segurança e Precaução; iv) Controle e Supervisão por seres humanos; v) Explicabilidade e Revisibilidade das decisões automatizadas; vi) Correção de vieses algorítmicos; vii) Transparência e Disponibilidade de dados públicos; viii) Privacidade e Segurança da Informação; e ix) Responsabilidade pelo adequado funcionamento.",
     palavrasChave: ["Inteligência Artificial", "Ética", "Administração Pública", "Política"],
     categoria: "Computação e Política",
     linkPdf: "https://sol.sbc.org.br/index.php/wics/article/view/24835/24656"
