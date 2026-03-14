@@ -1,9 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './styles/carousel.css';
-import { Search, BookMarked, X, GraduationCap, Code, Brain, Shield, Wrench, BarChart3, Network, Heart, Users, MessageSquare, Leaf, Lock, Lightbulb, Vote, Archive } from 'lucide-react';
+import { Search, BookMarked, X, GraduationCap, Code, Brain, Shield, Wrench, BarChart3, Network, Heart, Users, MessageSquare, Leaf, Lock, Lightbulb, Vote, Archive, ArrowUp } from 'lucide-react';
 import { ArticleCard } from './components/ArticleCard';
 import { CategoryCard } from './components/CategoryCard';
 import { articles, getCategories, getYears, getCategoryCounts } from './data/articles-data';
@@ -64,6 +64,15 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const categories = getCategories();
   const categoryCounts = getCategoryCounts();
@@ -189,7 +198,7 @@ export default function App() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
               <input
                 type="text"
-                placeholder="Buscar artigos..."
+                placeholder="Buscar artigos, palavras-chave, textos específicos..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
@@ -280,7 +289,7 @@ export default function App() {
         {filteredArticles.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArticles.map((article) => (
-              <ArticleCard key={article.id} article={article} />
+              <ArticleCard key={article.id} article={article} searchTerm={searchTerm} />
             ))}
           </div>
         ) : (
@@ -312,6 +321,17 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      {/* Botão Voltar ao Topo */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
+          aria-label="Voltar ao topo"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
     </div>
   );
 }

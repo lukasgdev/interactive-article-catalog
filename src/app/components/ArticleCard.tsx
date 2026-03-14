@@ -1,11 +1,13 @@
 import { ExternalLink, BookOpen, Calendar, Tag } from 'lucide-react';
 import { Article } from '../data/articles-data';
+import { HighlightText } from './HighlightText';
 
 interface ArticleCardProps {
   article: Article;
+  searchTerm?: string;
 }
 
-export function ArticleCard({ article }: ArticleCardProps) {
+export function ArticleCard({ article, searchTerm }: ArticleCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 flex flex-col h-full">
       {/* Cabeçalho com ano e categoria */}
@@ -21,12 +23,12 @@ export function ArticleCard({ article }: ArticleCardProps) {
 
       {/* Título */}
       <h3 className="text-lg font-semibold text-gray-900 mb-3">
-        {article.titulo}
+        <HighlightText text={article.titulo} highlight={searchTerm} />
       </h3>
 
       {/* Resumo */}
       <p className="text-sm text-gray-600 mb-4 flex-grow text-justify">
-        {article.resumo}
+        <HighlightText text={article.resumo} highlight={searchTerm} />
       </p>
 
       {/* Palavras-chave */}
@@ -41,7 +43,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
               key={index}
               className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"
             >
-              {palavra}
+              <HighlightText text={palavra} highlight={searchTerm} />
             </span>
           ))}
         </div>
