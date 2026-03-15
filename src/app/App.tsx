@@ -130,11 +130,11 @@ export default function App() {
           <div className="flex items-center gap-3 mb-2">
             <BookMarked className="w-8 h-8 text-green-600" />
             <h1 className="text-3xl font-bold text-gray-900">
-              Artigos WICS 2021-2025
+              Catalogação WICS 2021-2025
             </h1>
           </div>
           <p className="text-gray-600">
-            Catalogação de {articles.length} artigos científicos dos Anais do Workshop sobre as Implicações da Computação na Sociedade
+            {articles.length} artigos científicos dos Anais do Workshop sobre as Implicações da Computação na Sociedade
           </p>
         </div>
       </header>
