@@ -16,7 +16,7 @@ export function CategoryCard({ name, count, icon: Icon, isSelected, onClick, col
       className={`
         w-full relative p-5 rounded-xl border-2 transition-all duration-300 text-left
         ${isSelected 
-          ? 'bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 shadow-lg' 
+          ? 'bg-gradient-to-br from-green-600 to-green-700 border-green-700 shadow-lg' 
           : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-md'
         }
       `}
@@ -24,7 +24,7 @@ export function CategoryCard({ name, count, icon: Icon, isSelected, onClick, col
       <div className="flex items-start gap-4">
         <div className={`
           p-3 rounded-lg
-          ${isSelected ? 'bg-blue-500' : 'bg-gray-100'}
+          ${isSelected ? 'bg-green-500' : 'bg-gray-100'}
         `}>
           <Icon className={`w-6 h-6 ${isSelected ? 'text-white' : 'text-gray-600'}`} />
         </div>
@@ -33,7 +33,7 @@ export function CategoryCard({ name, count, icon: Icon, isSelected, onClick, col
           <h3 className={`font-semibold mb-1 ${isSelected ? 'text-white' : 'text-gray-900'}`}>
             {name}
           </h3>
-          <p className={`text-sm ${isSelected ? 'text-blue-100' : 'text-gray-600'}`}>
+          <p className={`text-sm ${isSelected ? 'text-green-100' : 'text-gray-600'}`}>
             {count} {count === 1 ? 'artigo' : 'artigos'}
           </p>
         </div>

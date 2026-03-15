@@ -16,7 +16,7 @@ export function ArticleCard({ article, searchTerm }: ArticleCardProps) {
           <Calendar className="w-4 h-4" />
           <span>{article.ano}</span>
         </div>
-        <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">
+        <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
           {article.categoria}
         </span>
       </div>
@@ -54,7 +54,7 @@ export function ArticleCard({ article, searchTerm }: ArticleCardProps) {
         href={article.linkPdf}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-200 mt-auto"
+        className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-colors duration-200 mt-auto"
       >
         <BookOpen className="w-4 h-4" />
         <span className="text-sm">Ler Artigo</span>

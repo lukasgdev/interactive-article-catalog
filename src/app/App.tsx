@@ -28,7 +28,7 @@ const categoryConfig: Record<string, { icon: any; color: string }> = {
   },
   'Computação Aplicada à Educação': {
     icon: GraduationCap,
-    color: 'bg-gradient-to-br from-blue-500 to-blue-600 text-white'
+    color: 'bg-gradient-to-br from-green-500 to-green-600 text-white'
   },
   'Desinformação e Sociedade': {
     icon: MessageSquare,
@@ -123,12 +123,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center gap-3 mb-2">
-            <BookMarked className="w-8 h-8 text-blue-600" />
+            <BookMarked className="w-8 h-8 text-green-600" />
             <h1 className="text-3xl font-bold text-gray-900">
               Artigos WICS 2021-2025
             </h1>
@@ -201,7 +201,7 @@ export default function App() {
                 placeholder="Buscar artigos, palavras-chave, textos específicos..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none bg-white"
               />
               {searchTerm && (
                 <button
@@ -219,7 +219,7 @@ export default function App() {
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value === 'all' ? 'all' : Number(e.target.value))}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none bg-white"
             >
               <option value="all">Todos os anos</option>
               {years.map((year) => (
@@ -270,7 +270,7 @@ export default function App() {
             )}
             <button
               onClick={resetFilters}
-              className="text-sm text-blue-600 hover:text-blue-800 underline"
+              className="text-sm text-green-600 hover:text-green-800 underline"
             >
               Limpar todos
             </button>
@@ -305,7 +305,7 @@ export default function App() {
             </p>
             <button
               onClick={resetFilters}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-colors duration-200"
             >
               Limpar filtros
             </button>
@@ -326,7 +326,7 @@ export default function App() {
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
+          className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
           aria-label="Voltar ao topo"
         >
           <ArrowUp className="w-5 h-5" />

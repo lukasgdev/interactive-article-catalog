@@ -201,7 +201,7 @@ export const articles: Article[] = [
   {
     id: 22,
     ano: 2022,
-    titulo: "Interação Humano-Computador, Usabilidade, Internet Banking, Idoso, Transformação Digital",
+    titulo: "Avaliação de usabilidade em aplicativos bancários móveis no contexto do público idoso",
     resumo: "Considerando o crescimento do número de idosos e a fim de promover possibilidades para que eles possam participar de forma ativa no uso de soluções digitais financeiras, é fundamental que a maneira com que se desenvolve software seja também pensada para essa população, levando em conta suas limitações. Para a construção de soluções digitais em geral é de suma importância conhecer as necessidades dos usuários e estabelecer quais critérios de usabilidade devem ser priorizados na interação humano-computador. Pensando em tais aspectos, a presente pesquisa, busca avaliar a usabilidade e satisfação do usuário em aplicativos Internet Banking no contexto do público idoso, investigar suas dificuldades de uso e por fim propor melhorias de usabilidade para esses aplicativos.",
     palavrasChave: ["Interação Humano-Computador", "Usabilidade", "Internet Banking", "Idoso", "Transformação Digital"],
     categoria: "Acessibilidade e Inclusão",
